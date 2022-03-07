@@ -35,8 +35,18 @@ DIRECTION Input::getInput()
     if (!inputQueue.empty())
     {
         DIRECTION tmp = inputQueue.front();
-        //std::cout << "TEST INPUT: " << tmp << std::endl;
+        // std::cout << "TEST INPUT: " << tmp << std::endl;
         inputQueue.pop();
         return tmp;
-    } else return NONE;
+    }
+    else
+        return NONE;
+}
+bool Input::quit()
+{
+    if (e.type == SDL_QUIT)
+    {
+        return true;
+    }
+    return false;
 }

@@ -6,13 +6,15 @@
 #include "Param.h"
 #include <queue>
 
-class Input {
+class Input
+{
 public:
     SDL_Event e;
     std::queue<DIRECTION> inputQueue;
 
     void handleInput();
     DIRECTION getInput();
+    bool quit();
 };
 
 #endif // INPUT_H

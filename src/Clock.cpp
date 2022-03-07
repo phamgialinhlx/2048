@@ -1,8 +1,11 @@
 #include "Clock.h"
+#include <ctime>
 
 void Clock::tick()
 {
+    srand(time(NULL));
     lastTime = SDL_GetTicks();
+
 }
 
 void Clock::delay()
